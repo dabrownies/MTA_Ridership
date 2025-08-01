@@ -3,7 +3,7 @@
 This project analyzes and visualizes NYC MTA ridership data from 2020–2025.  
 It includes a Python-based ETL pipeline and an interactive Streamlit dashboard that helps explore ridership trends across different transit modes.
 
-## 🔍 What It Does
+## What It Does
 
 - Cleans and transforms raw ridership CSV data from the [MTA Open Data Portal](https://data.ny.gov/Transportation/MTA-Daily-Ridership-Data-2020-2025/vxuj-8kew/about_data)
 - Outputs a cleaned CSV used to power visualizations
@@ -14,16 +14,16 @@ It includes a Python-based ETL pipeline and an interactive Streamlit dashboard t
 
 ## 📊 Live Dashboard
 
-👉 [Launch Streamlit App](https://mtaridership.streamlit.app/)
+[Launch Streamlit App](https://mtaridership.streamlit.app/)
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python
 - pandas
 - Streamlit
 - Public NYC Open Data
 
-## 🚀 How to Run Locally
+## Setup
 
 ```bash
 pip install -r requirements.txt
