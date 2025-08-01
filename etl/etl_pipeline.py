@@ -60,8 +60,18 @@ def transform_data(headers, rows):
 
     return cleaned_headers, cleaned_rows
 
+def write_to_csv(cleaned_headers, cleaned_rows, output_path):
+    """Write cleaned data to a new CSV file for Power BI."""
+    with open(output_path, mode='w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=cleaned_headers)
+        writer.writeheader()
+        writer.writerows(cleaned_rows)
+
+    print(f"Cleaned data written to: {output_path}")
+
 if __name__ == "__main__":
     CSV_PATH = "./data/mta_ridership.csv"
+    OUTPUT_CSV = "./data/cleaned_mta_ridership.csv"
     headers, rows = extract_csv(CSV_PATH)
 
     print("Headers:\n-----------------------------")
@@ -76,3 +86,5 @@ if __name__ == "__main__":
 
     print("Cleaned headers:", cleaned_headers)
     print("Sample cleaned row:", cleaned_rows[0])
+
+    write_to_csv(cleaned_headers, cleaned_rows, OUTPUT_CSV)
