@@ -28,6 +28,13 @@ mode_column = mode_column_map[mode]
 df_year = df[df["date"].dt.year == year]
 
 st.title("📊 MTA Ridership Dashboard")
+
+published_date = "2025-07-31" 
+st.markdown(
+    f"<p style='font-size: 14px; color: gray;'>Published by <b>Adam Sadov</b> · {published_date}</p>",
+    unsafe_allow_html=True
+)
+
 st.markdown(f"### {mode} Ridership in {year}")
 
 # KPI metrics
